@@ -1,0 +1,32 @@
+print("Welcome!")
+
+db_user_password= {
+    'jDoe': 'myPassword123',
+    'andyK': '123perfect',
+    'dLola': 'password'
+}
+db_user_role = {
+    'jDoe': 'admin',
+    'andyK': 'customer',
+    'dLola': 'cashier'
+}
+
+user_name = input("Enter your username: ")
+password = input("Enter your password: ")
+        
+#Validating username and password, assigning dashboards based on role
+if user_name in db_user_password:
+    if password == db_user_password[user_name]:
+        print("Login successful!")
+        match db_user_role[user_name]:
+            case 'admin':
+                print(f"Welcome to the admin Dashboard, Admin {user_name}!")
+            case 'customer':
+                print(f"Welcome dear customer, {user_name}!")
+            case 'cashier':
+                print(f"Welcome to the Finance Dashboard, {user_name}!")
+
+    else:
+        print("Incorrect password.")
+else:
+    print("Username not found.")
