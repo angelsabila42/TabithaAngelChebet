@@ -1,5 +1,4 @@
-print("Welcome!")
-
+#E-commerce Login System
 db_user_password= {
     'jDoe': 'myPassword123',
     'andyK': '123perfect',

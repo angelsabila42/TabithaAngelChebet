@@ -11,39 +11,36 @@ coupon_codes = {
 
 
 #Applying discounts as per subTotal price and coupon code if applicable
-if input_coupon_code in coupon_codes:
-    coupon_discount_rate = coupon_codes[input_coupon_code]
-    if sub_total >= 100000 and sub_total < 150000:
-        tiered_discount_rate = 10
-    
-    elif sub_total >= 150000:
-        tiered_discount_rate = 20
-    
+if sub_total >= 100000 and sub_total < 150000:
+    tiered_discount_rate = 10
+    if input_coupon_code in coupon_codes:
+        coupon_discount_rate = coupon_codes[input_coupon_code]
+    elif input_coupon_code == '':
+        coupon_discount_rate = 0
     else:
-        tiered_discount_rate = 0
-        
-elif input_coupon_code == '':
-    coupon_discount_rate = 0
-    if sub_total >= 100000 and sub_total < 150000:
-        tiered_discount_rate = 10
-    
-    elif sub_total >= 150000:
-        tiered_discount_rate = 20
-    
+        print("Invalid Coupon Code. Proceeding without applying coupon code...\n")
+        coupon_discount_rate = 0
+           
+elif sub_total >= 150000:
+    tiered_discount_rate = 20
+    if input_coupon_code in coupon_codes:
+        coupon_discount_rate = coupon_codes[input_coupon_code]
+    elif input_coupon_code == '':
+        coupon_discount_rate = 0
     else:
-        tiered_discount_rate = 0
+        print("Invalid Coupon Code. Proceeding without applying coupon code...\n")
+        coupon_discount_rate = 0
 
 else:
-    print("Invalid Coupon Code. Proceeding without applying coupon code...\n")
-    coupon_discount_rate = 0
-    if sub_total >= 100000 and sub_total < 150000:
-        tiered_discount_rate = 10
-    
-    elif sub_total >= 150000:
-        tiered_discount_rate = 20
-    
+    tiered_discount_rate = 0
+    if input_coupon_code in coupon_codes:
+        coupon_discount_rate = coupon_codes[input_coupon_code]
+    elif input_coupon_code == '':
+        coupon_discount_rate = 0
     else:
-        tiered_discount_rate = 0
+        print("Invalid Coupon Code. Proceeding without applying coupon code...\n")
+        coupon_discount_rate = 0
+        
 
 
 #Calculations 
