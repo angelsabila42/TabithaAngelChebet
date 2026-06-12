@@ -1,4 +1,4 @@
-#E-commerce Login System
+#E-commerce System
 db_user_password= {
     'jDoe': 'myPassword123',
     'andyK': '123perfect',
@@ -11,10 +11,10 @@ db_user_role = {
 }
 
 coupon_codes = {
-                    'E-COMM-56-CUST-01-11062026': 10,
-                    'E-COMM-65-CUST-01-09062026': 5,
-                    'E-COMM-57-CUST-01-07062026': 20
-                }
+    'E-COMM-56-CUST-01-11062026': 10,
+    'E-COMM-65-CUST-01-09062026': 5,
+    'E-COMM-57-CUST-01-07062026': 20
+}
 
 user_name = input("Enter your username: ")
 password = input("Enter your password: ")
