@@ -1,4 +1,4 @@
-#Menu Driven Calculator
+#Menu Driven Calculator Terminal
 
 #Functions
 def add(x,y): return x + y
