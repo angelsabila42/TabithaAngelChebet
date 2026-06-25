@@ -30,8 +30,6 @@ class FileOrganizer:
             folder_path = self.target_path / folder_name
             folder_path.mkdir(parents=True, exist_ok=True)
             
-    #Takes a calculated destination path. If that file already exists,
-    #it automatically appends _1, _2, _3, etc., until it finds a unique name.
     def _get_safe_destination(self, destination):
         if not destination.exists():
             return destination
@@ -49,12 +47,8 @@ class FileOrganizer:
             counter += 1
             
     def _get_new_path(self, old_path):
-        #Get the extension in lowercase and remove the dot (e.g., '.pdf' becomes 'pdf')
-        #.suffix gets the extension. [1:] strips the leading dot
         extension = old_path.suffix[1:].lower()
         
-        #Look up the folder name in your map. 
-        # .get() lets us provide a fallback ('Others') instantly if the key doesn't exist!
         target_folder = self.extension_map.get(extension, "Others")
         
         final_path = self.target_path / target_folder / old_path.name
