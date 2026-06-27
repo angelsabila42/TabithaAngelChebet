@@ -1,0 +1,13 @@
+2026-06-27 18:51:08 - INFO - User viewed all records
+2026-06-27 18:52:18 - INFO - Successfully added record: 21/U/8877
+2026-06-27 18:52:39 - WARNING - Update failed: Registration number logging.warning(f"Update failed: Wrong age input.") not found.
+2026-06-27 18:53:53 - WARNING - Update failed: Registration number jicid not found.
+2026-06-27 18:54:16 - WARNING - Update failed: Registration number c not found.
+2026-06-27 18:54:45 - WARNING - Data Entry Failed: Wrong gender input
+2026-06-27 18:55:06 - INFO - User viewed all records
+2026-06-27 18:57:46 - WARNING - Data Entry Failed: Wrong phone number format
+2026-06-27 18:59:48 - ERROR - Age Validation failed.
+2026-06-27 18:59:48 - WARNING - Data Entry Failed: Wrong age input
+2026-06-27 19:00:42 - INFO - Successfully added record: 23/U/7785
+2026-06-27 19:01:01 - INFO - User initiated deletion for registration number: 23/U/7785
+2026-06-27 19:01:01 - INFO - Successfully deleted record: 23/U/7785
