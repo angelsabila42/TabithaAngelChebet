@@ -57,6 +57,7 @@ class StudentRecordManager:
                         target_student_csv = row
         return target_student_csv, csv_rows
     
+    #Read JSON data
     def _read_json(self):
         if self.json_path.exists():
             try:
@@ -82,9 +83,18 @@ class StudentRecordManager:
 
     #Phone Validation
     def _validate_phone(self, phone):
-        # Require a plus sign, allow spaces or hyphens, and enforce exactly 12 digits.
-        pattern = r"^(?=(?:.*\d){12}$)\+[0-9]+(?:[ -][0-9]+)*$"
-        return bool(re.match(pattern, phone))
+        phone = phone.strip()
+        
+        #Must start with +, followed by numbers, spaces, or hyphens
+        pattern = r"^\+[0-9][- 0-9]*$"
+        if not re.match(pattern, phone):
+            return False
+            
+        #Strip spaces/hyphens and count actual numbers
+        digits_only = "".join(c for c in phone if c.isdigit())
+        
+        #Only 12 digits in total
+        return len(digits_only) == 12
 
     #Email Validation
     def _validate_email(self, email):
@@ -113,6 +123,7 @@ class StudentRecordManager:
     
     #ADDING A RECORD
     def add_record(self,reg_no, name, gender, age, program, phone, email):
+        reg_no = reg_no.upper()
         # Validate age as a positive integer greater than 0
         age = self._validate_age(age)
         if age is None:
@@ -182,6 +193,7 @@ class StudentRecordManager:
     
     #UPDATING A RECORD
     def update_records(self, reg_no):
+        reg_no = reg_no.upper()
         #Read CSV data
         target_student_csv, csv_rows = self._read_csv(reg_no)
                         
@@ -203,7 +215,13 @@ class StudentRecordManager:
         while True:
             print("Options:")
             print("1.Reg_no\n2.Name\n3.Gender\n4.Age\n5.Program\n6.Phone\n7.Email\n8.All")
-            choice = int(input("What do you want to change? (1-8): ").strip().lower())
+            choice = input("What do you want to change? (1-8): ").strip().lower()
+            
+            try:
+                choice = int(choice)
+            except ValueError:
+                print("Invalid Choice. Please use only numeric input.\n")
+                continue
             
             #Reg no
             if choice == 1:
@@ -310,7 +328,7 @@ class StudentRecordManager:
             else:
                 print("Invalid choice❗️ Please choose a valid option (1-8).\n")
                 
-        if old_reg_no != reg_no:
+        if old_reg_no.upper() != reg_no:
             all_json_data.pop(old_reg_no, None)
             
         #Remove old entry if reg_no has changed  
@@ -502,5 +520,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-        
+    main()     

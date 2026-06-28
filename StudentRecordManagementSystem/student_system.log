@@ -11,3 +11,28 @@
 2026-06-27 19:00:42 - INFO - Successfully added record: 23/U/7785
 2026-06-27 19:01:01 - INFO - User initiated deletion for registration number: 23/U/7785
 2026-06-27 19:01:01 - INFO - Successfully deleted record: 23/U/7785
+2026-06-28 14:25:25 - ERROR - Age Validation failed.
+2026-06-28 14:25:25 - WARNING - Data Entry Failed: Wrong age input
+2026-06-28 14:25:52 - INFO - Successfully added record: V
+2026-06-28 14:26:42 - ERROR - Age Validation failed.
+2026-06-28 14:26:42 - WARNING - Data Entry Failed: Wrong age input
+2026-06-28 14:27:07 - INFO - Successfully added record: DS
+2026-06-28 14:27:38 - INFO - Successfully added record: DDF
+2026-06-28 14:28:39 - WARNING - Data Entry Failed: Wrong phone number format
+2026-06-28 14:29:00 - INFO - Successfully added record: FSD
+2026-06-28 14:33:14 - INFO - Successfully added record: 24/U/7756/PS
+2026-06-28 14:38:24 - INFO - Successfully added record: 22/U/7545
+2026-06-28 14:39:55 - INFO - Successfully added record: +254 839 283 483
+2026-06-28 14:40:59 - INFO - Successfully updated record: 20/X/8483
+2026-06-28 14:44:08 - INFO - Successfully updated record: 24/U/7756/PS
+2026-06-28 14:45:40 - ERROR - Age Validation failed.
+2026-06-28 14:45:40 - WARNING - Update failed: Wrong age input.
+2026-06-28 14:47:32 - ERROR - Age Validation failed.
+2026-06-28 14:47:32 - WARNING - Update failed: Wrong age input.
+2026-06-28 14:49:47 - INFO - Successfully updated record: 22/U/7545
+2026-06-28 15:02:59 - WARNING - Update failed: Wrong phone number format.
+2026-06-28 15:04:47 - INFO - Successfully updated record: 22/u/7545
+2026-06-28 15:07:39 - INFO - Successfully updated record: 22/u/7545
+2026-06-28 15:09:26 - INFO - Successfully updated record: 22/U/7545
+2026-06-28 15:12:16 - WARNING - Update failed: Wrong email format.
+2026-06-28 15:12:50 - WARNING - Update failed: Wrong email format.
